@@ -15,7 +15,7 @@
 #
 
 # These options are required for all software definitions
-name "chef-12.4.3-smartos-16.4-zlib"
+name "smartos-base-64-lts-zlib"
 default_version "1.2.6"
 
 # A software can specify more than one version that is available for install

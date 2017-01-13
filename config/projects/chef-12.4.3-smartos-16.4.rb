@@ -1,28 +1,27 @@
-#
-# Copyright 2017 YOUR NAME
-#
-# All Rights Reserved.
-#
+name "smartos-base64-lts"
+maintainer "James Hart"
+homepage "https://github.com/wanelo-chef"
 
-name "chef-12.4.3-smartos-16.4"
-maintainer "CHANGE ME"
-homepage "https://CHANGE-ME.com"
-
-# Defaults to C:/chef-12.4.3-smartos-16.4 on Windows
-# and /opt/chef-12.4.3-smartos-16.4 on all other platforms
-install_dir "#{default_root}/#{name}"
+# Defaults to C:/smartos-base64-lts on Windows
+# and /opt/smartos-base64-lts on all other platforms
+install_dir "/opt/chef"
 
 build_version Omnibus::BuildVersion.semver
 build_iteration 1
 
-# Creates required build directories
-dependency "preparation"
 
-# chef-12.4.3-smartos-16.4 dependencies/components
-# dependency "somedep"
+override :ruby, version: "2.2.5"
+override :chef, version: "local_source"
+
+dependency 'chef'
+# Creates required build directories
+#dependency "chef"
 
 # Version manifest file
 dependency "version-manifest"
 
+compress :tgz
+
 exclude "**/.git"
 exclude "**/bundler/git"
+
