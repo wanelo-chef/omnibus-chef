@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Perform necessary chef-12.4.3-smartos-16.4 setup steps
+# before package is installed.
+#
+
+echo "You're about to install chef-12.4.3-smartos-16.4!"

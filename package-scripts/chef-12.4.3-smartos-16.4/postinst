@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# Perform necessary chef-12.4.3-smartos-16.4 setup steps
+# after package is installed.
+#
+
+PROGNAME=`basename $0`
+
+error_exit()
+{
+  echo "${PROGNAME}: ${1:-"Unknown Error"}" 1>&2
+  exit 1
+}
+
+echo "Thank you for installing chef-12.4.3-smartos-16.4!"
+
+exit 0
